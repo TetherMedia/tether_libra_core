@@ -4,14 +4,16 @@ import 'package:convert/convert.dart';
 
 import 'libra_coin.dart';
 
-/// Parse a binary blob into the AccountState
+/// The current state of the account address as read from the Libra network
 class AccountState {
 
 
   final Uint8List  authenticationKey;
+  /// Current balance
   final LibraCoin balance;
   final BigInt receivedEventsCount;
   final BigInt sentEventsCount;
+  /// Current sequnce number, next transaction should be one more
   final BigInt sequenceNumber;
   final bool delegatedWithdrawalCapability;
 
@@ -24,7 +26,7 @@ class AccountState {
       this.delegatedWithdrawalCapability
       );
 
-
+  /// @nodoc
   AccountState.empty(String address):
         this.balance = LibraCoin.fromInt(0),
         this.receivedEventsCount = BigInt.zero,
@@ -37,6 +39,7 @@ class AccountState {
     return 'AccountState{balance: ${balance.toString()}, receivedEventsCount: $receivedEventsCount, sentEventsCount: $sentEventsCount, sequenceNumber: $sequenceNumber, delegatedWithdrawalCapability: $delegatedWithdrawalCapability ';
   }
 
+  /// @nodoc
   static AccountState fromBytes(Uint8List bytes) {
     // If we don't copy, the bytes.buffer points to the parent buffer, not bytes[0] like we expect
     var buffer = bytes.buffer;

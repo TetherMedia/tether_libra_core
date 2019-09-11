@@ -1,8 +1,9 @@
 name: tether_libra_core
 description: A pure dart library to access the Libra network
-# version: 1.0.0
-# homepage: https://github.com/tethermedia/tether_libra_core
-# author: Gerry LaChac <glachac@tethermedia.com>
+version: 0.1.0
+homepage: https://github.com/tethermedia/tether_libra_core
+repository: https://github.com/tethermedia/tether_libra_core
+author: Gerry LaChac <glachac@tethermedia.com>
 
 environment:
   sdk: '>=2.2.0 <3.0.0'

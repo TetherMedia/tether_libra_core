@@ -1,6 +1,5 @@
 Libra Core Dart
 ===============
-Author: glachac@tethermedia.com
 
 
 The TetherMedia Libra Core library is a pure Dart library designed for use by Dart and Flutter programs to interact with Libra (https://libra.org) nodes on the test network.
@@ -9,7 +8,7 @@ The TetherMedia Libra Core library is a pure Dart library designed for use by Da
 
 This code started out as a straight port of the Libra wallet library (https://github.com/libra/libra.git) to Dart.  Somewhere along the way, Perfect Makanju released libra-core (https://github.com/perfectmak/libra-core), a JavaScript client for Libra, and parts of that effort were ported here as well to complete this Dart client library, along with some Dart spice added in (e.g. the use of isolates to keep heavy computing off the ui-thread to help with Flutter).
 
-To see the library in action, there is an example Flutter application built for [Android](http://play.google.com/store/apps/details?id=com.tethermedia.libra_wallet_demo)
+To see the library in action, there is an example Flutter application built for [Android](http://play.google.com/store/apps/details?id=com.tethermedia.libra_wallet_demo) coming soon
 
 
 ## Usage
@@ -107,3 +106,4 @@ Please file feature requests and bugs at the [issue tracker][tracker].
 ## License
 MIT except where noted in file headers.
 
+Author: glachac@tethermedia.com

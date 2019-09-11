@@ -4,7 +4,7 @@ import 'package:convert/convert.dart';
 import 'package:tether_libra_core/src/generated/transaction.pb.dart' as GrpcTransaction;
 import 'package:tether_libra_core/src/transaction/errors.dart';
 import 'package:tether_libra_core/src/transaction/transaction.dart';
-import 'package:tether_libra_core/types/account_state.dart';
+import 'package:tether_libra_core/src/types/account_state.dart';
 
 import '../generated/vm_errors.pb.dart';
 

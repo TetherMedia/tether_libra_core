@@ -2,6 +2,7 @@ import 'dart:math';
 import 'dart:typed_data';
 import 'package:convert/convert.dart';
 
+/// A representation of the address in the libra network
 class AccountAddress {
   Uint8List address;
   static const int ADDRESS_LENGTH = 32;

@@ -7,8 +7,8 @@ import 'package:tether_libra_core/src/crypto/sha3FixDigest.dart';
 import 'package:tether_libra_core/src/wallet/account_address.dart';
 import 'package:tether_libra_core/src/wallet/account.dart';
 import 'package:tether_libra_core/src/wallet/key_factory.dart';
-import 'package:tether_libra_core/types/account_state.dart';
-import 'package:tether_libra_core/types/libra_coin.dart';
+import 'package:tether_libra_core/src/types/account_state.dart';
+import 'package:tether_libra_core/src/types/libra_coin.dart';
 import '../transaction/transaction.dart';
 import '../transaction/hashSaltValues.dart';
 
@@ -18,15 +18,20 @@ import '../generated/transaction.pb.dart' as Transaction;
 import 'decoder.dart';
 import 'encoder.dart';
 
+/// Static values for libra network names
 class LibraNetwork {
   static String Testnet = 'testnet';
 }
+
+
+/// Static DNS values for libra nodes
 
 class ServerHosts {
   static String DefaultFaucet =  'faucet.testnet.libra.org';
   static String DefaultTestnet =  'ac.testnet.libra.org';
 }
 
+/// Configuration specification for the [LibraClient] instantiation
 class LibraLibConfig {
   int port;
   String host;
@@ -35,6 +40,7 @@ class LibraLibConfig {
   String validatorSetFile;
 }
 
+/// Interface to access the Libra network over the internet
 class LibraClient {
   LibraLibConfig _config;
   AdmissionControlClient _client;

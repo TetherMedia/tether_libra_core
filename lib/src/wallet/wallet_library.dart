@@ -12,13 +12,14 @@ import 'package:tether_libra_core/src/wallet/wallet_storage.dart';
 import 'account.dart';
 
 /// Logging package not working from isolates - quickfix for debugging
-void log(String str) {
+void _log(String str) {
   DateFormat formatter = DateFormat('HH:mm:ss.S');
   String dateString = formatter.format(DateTime.now());
   print('$dateString: $str');
 
 }
 
+/// The Libra wallet which contains public and private keys and account addresses
 class LibraWallet {
   Mnemonic _mnemonic;
   KeyFactory _key_factory;
@@ -150,8 +151,8 @@ LibraWallet _fromMnemonic(Map<String, dynamic> args){
     var x = LibraWallet.fromMnemonic(args['mnemonic'], seed: args['seed']);
     return x;
   }catch(e) {
-    log('Exception');
-    log(e);
+    _log('Exception');
+    _log(e);
     return null;
   }
 }
@@ -161,8 +162,8 @@ LibraWallet _create(Map<String, dynamic> args){
     var x = LibraWallet.create(seed: args['seed']);
     return x;
   }catch(e) {
-    log('Exception');
-    log(e);
+    _log('Exception');
+    _log(e);
     return null;
   }
 }
