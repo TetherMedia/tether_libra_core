@@ -1,4 +1,4 @@
-import 'package:tether_libra_core/libra_wallet_client.dart';
+import 'package:tether_libra_core/tether_libra_core.dart';
 import 'package:tether_libra_core/src/wallet/mnemonic.dart';
 import 'package:tether_libra_core/src/wallet/wallet_library.dart';
 import 'package:tether_libra_core/src/wallet/wallet_storage.dart';

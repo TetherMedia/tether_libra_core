@@ -1,10 +1,7 @@
 
-import 'package:tether_libra_core/libra_wallet_client.dart';
-import 'package:tether_libra_core/src/client/libra_client.dart';
+import 'package:tether_libra_core/tether_libra_core.dart';
 import 'package:tether_libra_core/src/transaction/transaction.dart';
 import 'package:tether_libra_core/src/wallet/mnemonic.dart';
-import 'package:tether_libra_core/src/wallet/wallet_library.dart';
-import 'package:tether_libra_core/src/types/libra_coin.dart';
 import 'package:test/test.dart';
 
 void main() {
